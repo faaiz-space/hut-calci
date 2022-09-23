@@ -2,6 +2,7 @@
 ## Guidelines for contriubutions
 
 
+Disclaimer:: Do Star⭐ this Repo then Fork🍴
 
 This project is for implementing different animations with which users can interact,
 It has a Calculator which has some cool features but needing more for others to get benifits.
