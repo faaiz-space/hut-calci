@@ -22,4 +22,4 @@ Entry Point: index.html (Do not change, it must always be this)
 
 
 This is a good project for beginners to get some hands on experience
-
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://pacehut.github.io/hut-calci/)
