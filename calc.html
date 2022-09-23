@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <button id="modeLap" onclick="changeMode()">
+
+    </button>
+
+    <div class="slide">
+
+        <button onclick="showNav()" id="showBtn">
+            >
+        </button>
+        <button id="mode" onclick="changeMode()">
+
+        </button>
+
+    </div>
+    <ul class="nav_elements" id="nav_id">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./index.html">Card</a></li>
+        <li><a href="./calc.html">CalC</a></li>
+        <li><a href="./contact.html" class="contact">Contact</a></li>
+
+    </ul>
+    <div class="bodyCont">
+
+
+        <div class="calc-container">
+
+            <div class="calc" id="" mainCalc>
+
+                <input type="text" class="input" placeholder="0">
+
+                <div class="symbolsHidden">
+                    <button onclick="lBrac()" id="lBrac" class="symbool">(</button>
+                    <button onclick="rBrac()" id="rBrac" class="symbool">)</button>
+                    <button onclick="e()" id="e" class="symbool">e</button>
+                </div>
+
+                <div class="symbolsUp">
+
+                    <button class="hideSymbols" onclick="hideButton()" id="arrow">
+                        <p id="hidebtn">^</p>
+                    </button>
+                    <button onclick="c()" id="clear" class="up">C</button>
+                    <button id="delete" onclick="dlt()" class="up">del</button>
+                    <button onclick="percentage()" id="per" class="up">%</button>
+
+                </div>
+                <div class="numbers">
+
+                    <button id="1" onclick="one()">1</button>
+                    <button id="2" onclick="two()">2</button>
+                    <button id="3" onclick="three()">3</button>
+                    <button id="4" onclick="four()">4</button>
+                    <button id="5" onclick="five()">5</button>
+                    <button id="6" onclick="six()">6</button>
+                    <button id="7" onclick="seven()">7</button>
+                    <button id="8" onclick="eight()">8</button>
+                    <button id="9" onclick="nine()">9</button>
+                    <button id="pi" onclick="pi()" class="symbool">&pi;</button>
+                    <button id="0" onclick="zero()">0</button>
+                    <button id="dot" onclick="dot()" class="symbool">.</button>
+                </div>
+
+                <div class="symbolsDown">
+
+                    <button id="divide" onclick="divide()" class="symbool">/</button>
+                    <button id="multiply" onclick="multiply()" class="symbool">x</button>
+                    <button id="subtract" onclick="sub()" class="symbool">-</button>
+                    <button id="add" onclick="add()" class="symbool">+</button>
+                    <button id="equal" onclick="equal()" class="symbool">=</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        Copyright &#169 www.pacehut.com All Rights Reserved
+    </footer>
+    <script src="calc.js"></script>
+
+</body>
+
+</html>
