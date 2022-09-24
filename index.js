@@ -6,7 +6,7 @@ preloader.classList.add("preload_finish");
 
 })
 
-
+// new line 
 
 function rotate() {
   let card_inside = document.getElementsByClassName("card-content");
