@@ -17,11 +17,9 @@ function rotate() {
 }
 
 let colors = [
-  "rgb(124, 73, 227)",
-  "rgb(84, 44, 163)",
-  "rgb(36, 0, 58)",
-  "rgb(66, 34, 130)",
-  "rgb(120, 47, 222)",
+  "#009b6d",
+  "#00d796",
+  "#51bf9e",
 ];
 let nav = document.getElementById("nav");
 let i = 0;
@@ -33,14 +31,14 @@ setInterval(changecolor, 5000);
 
 //Animation of heading at the onload
 setTimeout(() => {
-  let headingContent = document.getElementsByClassName("heading_content");
+  // let headingContent = document.getElementsByClassName("heading_content");
 
   let window_height = window.innerHeight;
 
-  window.addEventListener("load", () => {
-    headingContent[0].style.top = "10px";
-    headingContent[0].style.opacity = "1";
-  });
+  // window.addEventListener("load", () => {
+  //   headingContent[0].style.top = "10px";
+  //   headingContent[0].style.opacity = "1";
+  // });
 }, 30);
 
 // Animation of the nav elements and the logo
