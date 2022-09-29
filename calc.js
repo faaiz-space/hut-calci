@@ -1,3 +1,4 @@
+let flagLog=0;
 function btnClick(s) {
   s.classList.add("buttonClicked");
 
@@ -13,6 +14,16 @@ function add() {
   let value = input[0].value;
 
   input[0].value = `${value}+`;
+}
+const calcLog = ()=>
+{
+  console.log(flagLog)
+  let input = document.getElementsByClassName("input");
+  let value = input[0].value;
+  let click = document.getElementById("log");
+  btnClick(click);
+  input[0].value = `log ${value}`;
+  flagLog==0?flagLog=1:flagLog=0;
 }
 function dlt() {
   let click = document.getElementById("delete");
@@ -66,7 +77,19 @@ function equal() {
   let value = input[0].value;
   let click = document.getElementById("equal");
   btnClick(click);
-  // value=value.toString();
+  
+  if(flagLog==1)
+  {
+    console.log(flagLog);
+    value = value.substr(4,value.length);
+    value = Math.log(value).toString().substring(0,12);
+
+
+    flagLog=0;
+  }
+  else
+  {
+
   value = value.replace("x", "*");
   value = value.replace("pi", Math.PI);
   value = value.replace("e", "*2.718");
@@ -83,8 +106,12 @@ function equal() {
     }
   }
 
-  input[0].value = `${value}`;
-  console.log(value);
+}
+input[0].value = `${value}`;
+console.log(value);
+
+  // value=value.toString();
+  
 }
 function c() {
   let input = document.getElementsByClassName("input");
