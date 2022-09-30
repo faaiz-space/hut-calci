@@ -114,13 +114,22 @@ nav a {
 {
     background: url("./instagram.png") no-repeat center center/contain;
     height: 25px;
+    filter: invert();
+    opacity: 0.4;
    
 }
 
 #youtube
 {
+    opacity: 0.3;
+    filter: invert();
     background: url("./youtube.png") no-repeat center center/cover;
     
+}
+#youtube:hover,#instagram:hover
+{
+    opacity: 0.6;
+    transition: all 0.3s;
 }
 
 li {
