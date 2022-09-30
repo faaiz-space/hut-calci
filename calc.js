@@ -313,6 +313,9 @@ function changeMode() {
 
     document.getElementsByClassName("symbolsHidden")[0].style.background =
       mainColor;
+      document.getElementById("log").style.background=mainColor;
+      document.getElementById("log").style.color=secColor;
+
     document.getElementsByClassName("calc")[0].style.boxShadow =
       "0 4px 70px rgb(195, 195, 195)";
     document.getElementById("mode").style.background =
@@ -360,6 +363,8 @@ function changeMode() {
 
     document.getElementsByClassName("symbolsHidden")[0].style.background =
       DmainColor;
+      document.getElementById("log").style.background=DmainColor;
+      document.getElementById("log").style.color=DsecColor;
     document.getElementById("mode").style.background =
       'url("https://cdn-icons-png.flaticon.com/512/54/54241.png") no-repeat center center/cover';
     document.getElementById("modeLap").style.background =
