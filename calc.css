@@ -16,6 +16,11 @@ body {
 .slide {
     display: none;
 }
+button:hover
+{
+    background: #252525a5;
+    transition: all 0.1s;
+}
 
 #modeLap {
     display: flex;
