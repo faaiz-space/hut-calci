@@ -13,7 +13,7 @@ body {
   top: 0;
   
   background: linear-gradient(132deg, #ebebeb, #dadada, #f2dcff);
-  background: whitesmoke;
+  background: #0F0F0F;
 
   font-family: "Baloo Da 2", cursive;
 }
@@ -32,6 +32,7 @@ body {
   color: black;
   transition: opacity 0.5s;
 }
+
 .preload_finish
 {
   opacity: 0;
@@ -82,8 +83,8 @@ nav {
 top: 0;
   height: 80px;
   width: 100%;
-  color: rgb(113, 0, 179);
-  background: whitesmoke;
+  color: #00bc90;
+  background: #0F0F0F;
   font-family: "Montserrat Subrayada", sans-serif;
   letter-spacing: 0.2em;
   transition: all 1s;
@@ -103,7 +104,7 @@ nav a {
   height: 30px;
   width: 30px;
 
-  background: #000;
+  background: #009b6d;
   position: relative;
   left: 500px;
   margin: 0 5px;
@@ -131,7 +132,7 @@ li {
   font-size: 1.1rem;
   position: absolute;
   left: 0;
-  bottom: 12rem;
+  bottom: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,13 +143,17 @@ li {
 .nav_elements li {
   padding: 8px;
 }
+.nav_elements li:hover {
+  color: #009b6d;
+}
+
 .nav_elements li a:hover {
-  color: rgb(121, 82, 179);
+  color: #00d796;
   border-top: 2px solid black;
 }
 
 .nav_elements li a {
-  color: black;
+  color: rgba(247, 160, 0, 0.76);
   text-decoration: none;
   transition: all 0.25s;
   -webkit-transition: all 0.25s ease-in-out;
@@ -182,6 +187,11 @@ li {
   border-radius: 5px;
   box-shadow: -4px 4px 10px 5px grey;
   opacity: 0.85;
+  width: 90%;
+  height: 100%;
+  opacity: 0.3;
+  transform: translate(0px, -91px);
+  box-shadow: none;
 }
 .intro_heading {
   height: 400px;
@@ -203,15 +213,16 @@ li {
   padding: 10px;
   z-index: 5;
 }
-.heading_content {
+.heading_content
+{
+  opacity: 1;
+  color: white;
   position: absolute;
-  top: 130px;
-  opacity: 0;
-  transition: all 0.7s ease-in-out;
-  
-  font-family:'Times New Roman', Times, serif;
-  font-size: 2.5rem;
-  z-index: 2;
+  top: 35vh;
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  opacity: 0.8;
 }
 .container {
   width: 100%;
@@ -219,7 +230,7 @@ li {
 
 }
 .background {
-  background: linear-gradient(132deg, #ebebeb, #dadada, #e5b9ff);
+  background: #0F0F0F;
   background-size: 400% 400%;
   /* animation: Gradient 15s ease infinite; */
   position: relative;
@@ -236,13 +247,13 @@ li {
   left: 45vw;
   width: 10px;
   height: 10px;
-  border: solid 1px #aa29ff;
+  border: solid 1px #424242;
   transform-origin: top left;
   transform: scale(0) rotate(0deg) translate(-50%, -50%);
   animation: cube 13s ease-out forwards infinite;
 }
 .cube:nth-child(2n) {
-  border-color: #621079;
+  border-color: #3e3e3e;
 }
 .cube:nth-child(2) {
   animation-delay: 1.5s;
@@ -321,6 +332,7 @@ li {
   margin-top: 0px;
   margin-bottom: 20px;
   font-size: 2.4rem;
+  color: white;
   border-bottom: 4px solid rgb(121, 82, 179);
 }
 
@@ -400,6 +412,7 @@ li {
 {
   color: whitesmoke;
 }
+
 .back-view {
   height: 100%;
   width: 100%;
@@ -463,9 +476,9 @@ footer {
     position: sticky;
     width: 100%;
     display: flex;
-    height: 1.8rem;
+    height: 56.8rem;
     margin: 0 auto;
-    margin-top: 24px;
+    /* margin-top: 24px; */
     margin-bottom: -24px;
     flex-direction: row;
     align-items: center;
@@ -480,8 +493,10 @@ footer {
   }
   .intro::before {
     width: 90%;
-    height: 70%;
+    height: 100%;
+    opacity: 0.3;
     transform: translate(0px, -91px);
+    box-shadow: none;
 }
 .background
 {
