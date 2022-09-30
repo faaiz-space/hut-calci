@@ -1,4 +1,4 @@
-# Pacehut Calci and Animations
+# Hut Calci and Animations
 ## Guidelines for contriubutions
 
 
