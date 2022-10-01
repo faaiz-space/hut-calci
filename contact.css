@@ -12,7 +12,7 @@ body
 }
 nav
 {
-    background: rgb(231, 231, 231);
+    background: rgb(0, 0, 0);
     
   font-family: "Montserrat Subrayada", sans-serif;
 }
@@ -72,9 +72,10 @@ input
 }
 .nav_elements
 {
-    height: 100vh;
+    height: 105vh;
     width: 8rem;
-    background: rgb(231, 231, 231);
+    background: rgb(0, 0, 0);
+    color: #110245;
     position: absolute;
     top: 2.5rem;
   left: 0;
@@ -106,7 +107,7 @@ footer {
     /* position: ; */
     text-align: center;
     color: whitesmoke;
-    top: 2rem;
+    top: 10.5rem;
     position: relative;
     z-index: 10;
     background-color: #110245;
