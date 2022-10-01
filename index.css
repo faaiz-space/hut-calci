@@ -567,11 +567,7 @@ footer {
   nav a {
    
     width: 31px;
-   
-    display: block;
-   
-    left: -65px;
-    top: 7.2rem;
+    left: 105px;
     margin: 0 5px;
   }
 }
