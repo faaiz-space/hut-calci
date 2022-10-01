@@ -72,7 +72,7 @@ input
 }
 .nav_elements
 {
-    height: 105vh;
+    height: 100vh;
     width: 8rem;
     background: rgb(0, 0, 0);
     color: #110245;
@@ -106,8 +106,8 @@ footer {
     width: 100%;
     /* position: ; */
     text-align: center;
-    color: whitesmoke;
-    top: 10.5rem;
+    color: rgb(245, 245, 245);
+    top: 9rem;
     position: relative;
     z-index: 10;
     background-color: #110245;
@@ -119,14 +119,14 @@ footer {
   @media (max-width: 800px) {
     nav
     {
-        background: rgb(231, 231, 231);
+        background: rgb(0, 0, 0);
         
       font-family: "Montserrat Subrayada", sans-serif;
     }
   .nav_elements{
 
       
-      height: 15vh;
+      height: 12vh;
       width: 100%;
     background: none;
     position: absolute;
@@ -175,11 +175,11 @@ section
 footer
 {
     height: 30px;
-    width: 24rem;
+    width: 100%fit-content;
     color: white;
     position: absolute;
     left: 0%;
-    top: 109vh;
+    top: 105vh;
     margin-top: 2rem;
     font-size: 0.8rem;
 }

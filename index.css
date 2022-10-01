@@ -494,6 +494,7 @@ footer {
     font-weight: bold;
     font-size: 1rem;
     z-index: 2;
+    background-color: #0F0F0F;
   }
   .intro
   {
