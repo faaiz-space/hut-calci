@@ -192,6 +192,15 @@ function zero() {
   let value = input[0].value;
   input[0].value = `${value}0`;
 }
+
+/****FIND SQUARE OF ANY NUMBER****/
+function square() {
+  let click = document.getElementById("square");
+  btnClick(click);
+  let input = document.getElementsByClassName("input");
+  let value = input[0].value;
+  input[0].value = `${value * value}`;
+}
 function e() {
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
