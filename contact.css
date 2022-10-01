@@ -90,7 +90,7 @@ button
     border: 1.5px solid rgba(76, 0, 121, 0.746);
     border-radius: 7px;
     transition: all 0.5s;
-    box-shadow: 0px 5px 7px rgba(2, 20, 175, 0.822);
+    box-shadow: 0px 5px 7px white;
     transform-style: preserve-3d;
 }
 button:hover
@@ -99,6 +99,7 @@ button:hover
     background: linear-gradient(#2D1784,#110245);
     border: 1.5px solid rgba(245, 245, 245, 0);
     box-shadow: 0px 5px 7px rgba(73, 73, 78, 0.822);
+    cursor:pointer;
 }
 footer {
     height: 30px;
