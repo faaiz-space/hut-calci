@@ -378,10 +378,14 @@ function changeMode() {
 }
 
 document.getElementById("numberInput").onkeydown = function(evt) {
-  evt = evt || window.event;
-  var charCode = evt.which || evt.keyCode;
-  var charStr = String.fromCharCode(charCode);
-  if (/[^0-9\b]/.test(charStr)) {
-    return false;
+  if (evt.key == "Enter") {
+    equal();
+  } else {
+    evt = evt || window.event;
+    var charCode = evt.which || evt.keyCode;
+    var charStr = String.fromCharCode(charCode);
+    if (/[^0-9\b]/.test(charStr)) {
+      return false;
+    }
   }
 }
