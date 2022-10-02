@@ -1,4 +1,4 @@
-let flagLog=0;
+let flagLog=0;let lastValidVal = "";
 function btnClick(s) {
   s.classList.add("buttonClicked");
 
@@ -11,7 +11,7 @@ function add() {
   let click = document.getElementById("add");
   btnClick(click);
   let input = document.getElementsByClassName("input");
-  let value = input[0].value;
+  let value = input[0].value; lastValidVal = input[0].value;
 
   input[0].value = `${value}+`;
 }
@@ -22,7 +22,7 @@ const calcLog = ()=>
   let value = input[0].value;
   let click = document.getElementById("log");
   btnClick(click);
-  input[0].value = `log ${value}`;
+  input[0].value = `log ${value}`; lastValidVal = input[0].value;
   flagLog==0?flagLog=1:flagLog=0;
 }
 function dlt() {
@@ -34,7 +34,7 @@ function dlt() {
   console.log(len);
   value = value.substr(0, len - 1);
   console.log(value);
-  input[0].value = `${value}`;
+  input[0].value = `${value}`; lastValidVal = input[0].value;
 }
 
 function sub() {
@@ -43,19 +43,19 @@ function sub() {
 
   let click = document.getElementById("subtract");
   btnClick(click);
-  input[0].value = `${value}-`;
+  input[0].value = `${value}-`; lastValidVal = input[0].value;
 }
 function divide() {
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
-  input[0].value = `${value}/`;
+  input[0].value = `${value}/`; lastValidVal = input[0].value;
   let click = document.getElementById("divide");
   btnClick(click);
 }
 function multiply() {
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
-  input[0].value = `${value}x`;
+  input[0].value = `${value}x`; lastValidVal = input[0].value;
   console.log("multiply");
   let click = document.getElementById("multiply");
   btnClick(click);
@@ -67,7 +67,7 @@ function percentage() {
     value = parseFloat(value);
     value = value / 100.0;
     value = value.toString();
-    input[0].value = `${value}`;
+    input[0].value = `${value}`; lastValidVal = input[0].value;
   }
   let click = document.getElementById("per");
   btnClick(click);
@@ -107,7 +107,7 @@ function equal() {
   }
 
 }
-input[0].value = `${value}`;
+input[0].value = `${value}`; lastValidVal = input[0].value;
 console.log(value);
 
   // value=value.toString();
@@ -118,7 +118,7 @@ function c() {
   let click = document.getElementById("clear");
   btnClick(click);
   let value = input[0].value;
-  input[0].value = "";
+  input[0].value = ""; lastValidVal = input[0].value;
   console.log("pols");
 }
 function one() {
@@ -126,14 +126,14 @@ function one() {
   let click = document.getElementById("1");
   btnClick(click);
   let value = input[0].value;
-  input[0].value = `${value}1`;
+  input[0].value = `${value}1`; lastValidVal = input[0].value;
 }
 function two() {
   let input = document.getElementsByClassName("input");
   let click = document.getElementById("2");
   btnClick(click);
   let value = input[0].value;
-  input[0].value = `${value}2`;
+  input[0].value = `${value}2`; lastValidVal = input[0].value;
 }
 function three() {
   let click = document.getElementById("3");
@@ -141,61 +141,61 @@ function three() {
 
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
-  input[0].value = `${value}3`;
+  input[0].value = `${value}3`; lastValidVal = input[0].value;
 }
 function four() {
   let click = document.getElementById("4");
   btnClick(click);
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
-  input[0].value = `${value}4`;
+  input[0].value = `${value}4`; lastValidVal = input[0].value;
 }
 function five() {
   let click = document.getElementById("5");
   btnClick(click);
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
-  input[0].value = `${value}5`;
+  input[0].value = `${value}5`; lastValidVal = input[0].value;
 }
 function six() {
   let click = document.getElementById("6");
   btnClick(click);
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
-  input[0].value = `${value}6`;
+  input[0].value = `${value}6`; lastValidVal = input[0].value;
 }
 function seven() {
   let click = document.getElementById("7");
   btnClick(click);
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
-  input[0].value = `${value}7`;
+  input[0].value = `${value}7`; lastValidVal = input[0].value;
 }
 function eight() {
   let click = document.getElementById("8");
   btnClick(click);
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
-  input[0].value = `${value}8`;
+  input[0].value = `${value}8`; lastValidVal = input[0].value;
 }
 function nine() {
   let click = document.getElementById("9");
   btnClick(click);
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
-  input[0].value = `${value}9`;
+  input[0].value = `${value}9`; lastValidVal = input[0].value;
 }
 function zero() {
   let click = document.getElementById("0");
   btnClick(click);
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
-  input[0].value = `${value}0`;
+  input[0].value = `${value}0`; lastValidVal = input[0].value;
 }
 function e() {
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
-  input[0].value = `${value}e`;
+  input[0].value = `${value}e`; lastValidVal = input[0].value;
   let click = document.getElementById("e");
   btnClick(click);
 }
@@ -204,28 +204,28 @@ function dot() {
   btnClick(click);
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
-  input[0].value = `${value}.`;
+  input[0].value = `${value}.`; lastValidVal = input[0].value;
 }
 function pi() {
   let click = document.getElementById("pi");
   btnClick(click);
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
-  input[0].value = `${value} 3.14`;
+  input[0].value = `${value} 3.14`; lastValidVal = input[0].value;
 }
 function lBrac() {
   let click = document.getElementById("lBrac");
   btnClick(click);
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
-  input[0].value = `${value}(`;
+  input[0].value = `${value}(`; lastValidVal = input[0].value;
 }
 function rBrac() {
   let click = document.getElementById("rBrac");
   btnClick(click);
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
-  input[0].value = `${value})`;
+  input[0].value = `${value})`; lastValidVal = input[0].value;
 }
 
 let flag = 1;
@@ -389,3 +389,21 @@ document.getElementById("numberInput").onkeydown = function(evt) {
     }
   }
 }
+
+function initKeyboardMode() {
+	function checkName(evt) {
+		const charCode = evt.data ? evt.data.codePointAt(0) : 0;
+		if (charCode > 65 && charCode < 122) {
+			evt.target.value = lastValidVal;
+		} else {
+			lastValidVal = evt.target.value;
+		}
+	}
+	const inputBox = document.getElementById("numberInput");
+	inputBox.addEventListener("input", checkName, false);
+  inputBox.addEventListener("change", () => {
+    lastValidVal = document.getElementsByClassName('input')[0].value
+    console.log(lastValidVal)
+  }, false)
+}
+initKeyboardMode();
