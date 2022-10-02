@@ -108,8 +108,6 @@ function equal() {
 
 }
 input[0].value = `${value}`;
-console.log(value);
-
   // value=value.toString();
   
 }
@@ -193,13 +191,13 @@ function zero() {
   input[0].value = `${value}0`;
 }
 
-/****FIND SQUARE OF ANY NUMBER****/
-function square() {
+/****FIND POWER OF ANY NUMBER****/
+function power() {
   let click = document.getElementById("square");
   btnClick(click);
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
-  input[0].value = `${value * value}`;
+  input[0].value = `${value}**`;
 }
 function e() {
   let input = document.getElementsByClassName("input");
