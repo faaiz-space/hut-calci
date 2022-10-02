@@ -193,7 +193,7 @@ function zero() {
 
 /****FIND POWER OF ANY NUMBER****/
 function power() {
-  let click = document.getElementById("square");
+  let click = document.getElementById("power");
   btnClick(click);
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
