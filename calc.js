@@ -108,8 +108,6 @@ function equal() {
 
 }
 input[0].value = `${value}`;
-console.log(value);
-
   // value=value.toString();
   
 }
@@ -191,6 +189,15 @@ function zero() {
   let input = document.getElementsByClassName("input");
   let value = input[0].value;
   input[0].value = `${value}0`;
+}
+
+/****FIND POWER OF ANY NUMBER****/
+function power() {
+  let click = document.getElementById("power");
+  btnClick(click);
+  let input = document.getElementsByClassName("input");
+  let value = input[0].value;
+  input[0].value = `${value}**`;
 }
 function e() {
   let input = document.getElementsByClassName("input");
