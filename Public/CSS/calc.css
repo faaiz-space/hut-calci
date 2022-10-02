@@ -1,0 +1,359 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --mainBg: rgb(8, 8, 8);
+    --symbolColor: rgb(131, 20, 235);
+    --bradius: 10px;
+    transition: all 0.8s ease-in-out;
+    /* overflow: auto; */
+}
+
+body {
+    font-family: 'Baloo Da 2';
+}
+
+.slide {
+    display: none;
+}
+button:hover
+{
+    background: #252525a5;
+    transition: all 0.1s;
+}
+
+#modeLap {
+    display: flex;
+    position: absolute;
+    filter: invert();
+    background: url("https://cdn-icons-png.flaticon.com/512/54/54241.png") no-repeat center center/cover;
+    height: 30px;
+    width: 30px;
+    left: 47rem;
+    top: 2.6rem;
+    /* top: 0.5rem; */
+    /* right: 1rem; */
+    z-index: 20;
+}
+
+.nav_elements {
+    width: 100px;
+    height: 10rem;
+    font-size: 1.1rem;
+    position: absolute;
+    left: 0;
+    bottom: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    z-index: 5;
+}
+
+.nav_elements li {
+    padding: 8px;
+    list-style: none;
+}
+
+.nav_elements li a:hover {
+    color: rgb(121, 82, 179);
+    border-top: 2px solid rgb(98, 98, 98);
+}
+
+.nav_elements li a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s ease-in-out;
+}
+
+.bodyCont {
+    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: var(--mainBg);
+
+
+}
+
+.calc-container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--mainBg);
+    box-shadow: 4px 4px 10px grey;
+
+}
+
+.calc {
+    height: 33rem;
+    width: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    background: rgb(8, 8, 8);
+    color: white;
+    border-radius: var(--bradius);
+    box-shadow: 0 0 20px rgba(53, 0, 103, 0.463);
+
+    /* border: 2px solid red; */
+}
+
+.input {
+    height: 14rem;
+    width: inherit;
+    outline: none;
+    position: absolute;
+    background: #000;
+    color: white;
+    font-size: 2rem;
+    top: 0;
+    border: none;
+    padding-top: 4rem;
+    padding-left: 1rem;
+    border-radius: var(--bradius);
+    font-family: 'Baloo Da 2';
+}
+
+.numbers {
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    top: 17.5rem;
+    left: 0;
+    /* border: 2px solid white; */
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: var(--bradius);
+}
+
+.numbers button {
+    height: 60px;
+    width: 70px;
+    padding: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.symbolsUp {
+    display: flex;
+    height: 3.5rem;
+    width: 14rem;
+    position: absolute;
+    top: 14rem;
+    left: 0;
+    border-radius: var(--bradius);
+
+    /* border: 2px solid green; */
+}
+
+button {
+    height: 60px;
+    width: 70px;
+    padding: 5px;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    background: rgb(8, 8, 8);
+    /* background: linear-gradient(var(--mainBg),#160a21); */
+    color: whitesmoke;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: var(--bradius);
+    text-shadow: 0 0 0.8px #540165;
+    /* border-radius: 100px */
+
+
+}
+
+.buttonClicked {
+    background: rgb(28, 28, 28);
+}
+
+.symbolsDown {
+    color: black;
+    height: 15rem;
+    width: 8rem;
+    position: absolute;
+    top: 13.8rem;
+    left: 13.2rem;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: var(--bradius);
+
+}
+
+.symbolsDown button,
+.symbolsUp button,
+.symbolsHidden button {
+    color: var(--symbolColor);
+}
+
+.symbolsUp button {
+    color: rgb(194, 100, 0);
+}
+
+.symbolsHidden {
+    display: flex;
+    transform: translateY(4rem);
+    opacity: 0;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 10rem;
+    width: 10rem;
+    height: 2rem;
+    z-index: -1;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.symbolsHidden button {
+    height: 2rem;
+}
+
+.symbolsShown {
+    transform: translateY(2rem);
+    opacity: 1;
+    pointer-events: all;
+    z-index: 1;
+}
+
+.halfTurn {
+    transform: translateY(4px) scale(2, 1) rotateZ(0.5turn);
+
+}
+
+.hideSymbols {
+    font-size: 1.2rem;
+    font-weight: 150;
+    transform: translateZ(0);
+    transition: all 0.5s ease-in-out;
+
+}
+
+#hidebtn {
+    display: inline-block;
+    transform: translateY(4px) scale(2, 1);
+    transition: all 1s;
+
+}
+
+
+#subtract {
+    font-size: 2rem;
+}
+
+footer {
+    height: 25px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 0.9rem;
+    background-color: rgb(14 0 34);
+}
+
+@media (max-width:800px) {
+
+    body {
+        display: flex;
+        height: 100%;
+
+        flex-direction: column;
+    }
+
+    #modeLap {
+        display: none;
+    }
+
+    .slide {
+        display: flex;
+        flex-wrap: nowrap;
+        transform: rotateZ(0);
+        background: var(--mainBg);
+        position: relative;
+        height: 50px;
+        width: 100%;
+        overflow: hidden;
+        justify-content: flex-end;
+        z-index: 10;
+    }
+
+    #showBtn {
+        color: whitesmoke;
+        font-weight: 500;
+        position: relative;
+        font-size: 1.5rem;
+        margin-right: auto;
+        justify-self: flex-start;
+        transition: all 0.5s ease-in-out;
+        transform: rotateZ(-0.25turn) scale(1, 2);
+
+    }
+
+    #mode {
+
+        /* height: 30px;
+        width: 30px; */
+        /* align-self:flex-end */
+        position: absolute;
+        filter: invert();
+        background: url("https://cdn-icons-png.flaticon.com/512/54/54241.png") no-repeat center center/cover;
+        height: 30px;
+        width: 30px;
+        top: 0.5rem;
+        right: 1rem;
+        opacity: 0.9;
+
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    .nav_elements {
+        position: absolute;
+        top: -8rem;
+        transform: translateX(10rem);
+        opacity: 0;
+        pointer-events: none;
+
+    }
+
+    .showNav {
+        font-size: .8rem;
+        font-family: 'Baloo Da 2';
+        color: whitesmoke;
+        top: 3rem;
+        transform: translateX(0rem);
+        background: rgb(35, 35, 35);
+        width: 100%;
+        transition: all 0.8s ease-in-out;
+        margin: 0 auto;
+        opacity: 1;
+        pointer-events: all;
+
+    }
+
+    .calc {
+
+        box-shadow: 0 0 3rem rgb(53 0 103 / 53%);
+    }
+
+
+}
+
+
